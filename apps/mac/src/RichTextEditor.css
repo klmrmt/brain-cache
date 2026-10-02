@@ -1,0 +1,115 @@
+.rich-editor .rich-editor__toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 8px 0;
+  padding: 10px 10px 8px;
+  border-top: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--raised);
+}
+
+.rich-editor__group {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 11px;
+}
+
+.rich-editor__group:not(:last-of-type) {
+  border-right: 1px solid var(--border);
+}
+
+.rich-editor__group-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rich-editor__group-label {
+  padding-left: 6px;
+  color: var(--subtle);
+  font-size: var(--font-label);
+  font-weight: 500;
+  line-height: calc(16px * var(--font-scale));
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+.rich-editor .rich-editor__toolbar button,
+.rich-editor .rich-editor__toolbar select {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 7px;
+  min-width: 31px;
+  min-height: 32px;
+  height: auto;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: calc(14px * var(--font-scale));
+  cursor: pointer;
+}
+
+.rich-editor .rich-editor__toolbar select {
+  width: calc(118px * var(--font-scale));
+  margin-right: 5px;
+  border-color: var(--border);
+  color: var(--paper);
+  font-size: var(--font-control);
+  color-scheme: var(--color-scheme);
+}
+
+.rich-editor .rich-editor__toolbar .rich-editor__image-button {
+  font-size: var(--font-control);
+}
+
+.rich-editor .rich-editor__toolbar button:hover:not(:disabled),
+.rich-editor .rich-editor__toolbar button[aria-pressed="true"] {
+  border-color: var(--border);
+  background: var(--hover);
+  color: var(--paper);
+}
+
+.rich-editor .rich-editor__toolbar button:disabled,
+.rich-editor .rich-editor__toolbar select:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+.rich-editor__toolbar svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.thought-detail--familiar .rich-editor__content {
+  padding-inline: var(--detail-gutter);
+}
+
+.thought-detail--familiar .rich-editor__content .rich-document {
+  padding: 24px 0 16px;
+}
+
+.thought-detail--familiar .rich-editor__task-reminder {
+  margin-inline: var(--detail-gutter);
+}
+
+@media (max-width: 600px) {
+  .rich-editor .rich-editor__toolbar { padding-inline: 4px; }
+  .rich-editor__group { padding-inline: 8px; }
+}

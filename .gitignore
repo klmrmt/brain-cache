@@ -1,0 +1,42 @@
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+node_modules/
+.pnpm-store/
+dist/
+target/
+apps/mac/src-tauri/gen/
+apps/mac/src-tauri/icons/icon-1024.png
+apps/mac/src-tauri/icons/icon.iconset/
+
+# Local credentials and signing material
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.p12
+*.pfx
+*.p8
+*.pem
+*.key
+*.mobileprovision
+
+# Personal application databases and their SQLite sidecars
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite-journal
+*.sqlite3-journal
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Local verified build candidates
+/release-artifacts/

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title">
+  <title id="title">Brain Cache Blob</title>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141618"/>
+      <stop offset="1" stop-color="#090a0b"/>
+    </linearGradient>
+    <linearGradient id="blob" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#c7ff71"/>
+      <stop offset="1" stop-color="#84d63f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="220" fill="url(#background)"/>
+  <path
+    fill="url(#blob)"
+    d="M511 190c157 0 288 103 288 246 0 74-35 132-83 177-18 17-29 40-27 65l7 91c3 40-40 67-75 46l-75-44c-21-13-47-16-71-9-39 11-80 17-122 17-123 0-207-60-207-153 0-45 20-84 57-116-17-31-26-67-26-106 0-126 134-214 314-214Z"
+  />
+  <circle cx="411" cy="486" r="27" fill="#141618"/>
+  <circle cx="620" cy="486" r="27" fill="#141618"/>
+  <path d="M426 600c46 35 126 35 172 0" fill="none" stroke="#141618" stroke-linecap="round" stroke-width="28"/>
+</svg>

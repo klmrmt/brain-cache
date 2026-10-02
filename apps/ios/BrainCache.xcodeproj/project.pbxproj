@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCB000000000000000000001 /* BrainCacheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000001 /* BrainCacheApp.swift */; };
+		BCB000000000000000000002 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000002 /* Thought.swift */; };
+		BCB000000000000000000003 /* CaptureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000003 /* CaptureOperation.swift */; };
+		BCB000000000000000000004 /* ThoughtStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000004 /* ThoughtStore.swift */; };
+		BCB000000000000000000005 /* FileThoughtStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000005 /* FileThoughtStore.swift */; };
+		BCB000000000000000000006 /* BrainCacheTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000006 /* BrainCacheTheme.swift */; };
+		BCB000000000000000000007 /* CaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000007 /* CaptureViewModel.swift */; };
+		BCB000000000000000000008 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000008 /* CaptureView.swift */; };
+		BCB000000000000000000009 /* CaptureOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000009 /* CaptureOperationTests.swift */; };
+		BCB00000000000000000000A /* FileThoughtStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF00000000000000000000A /* FileThoughtStoreTests.swift */; };
+		BCB00000000000000000000B /* CaptureViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF00000000000000000000B /* CaptureViewModelTests.swift */; };
+		BCB00000000000000000000C /* CacheThoughtIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF00000000000000000000E /* CacheThoughtIntent.swift */; };
+		BCB00000000000000000000D /* CacheThoughtIntentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF00000000000000000000F /* CacheThoughtIntentTests.swift */; };
+		BCB00000000000000000000E /* CaptureDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000010 /* CaptureDeepLink.swift */; };
+		BCB00000000000000000000F /* CaptureDeepLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000010 /* CaptureDeepLink.swift */; };
+		BCB000000000000000000010 /* LockScreenCaptureWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000011 /* LockScreenCaptureWidget.swift */; };
+		BCB000000000000000000011 /* CaptureDeepLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000012 /* CaptureDeepLinkTests.swift */; };
+		BCB000000000000000000012 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000016 /* WidgetKit.framework */; };
+		BCB000000000000000000013 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000017 /* SwiftUI.framework */; };
+		BCB000000000000000000014 /* BrainCacheLockScreenWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000015 /* BrainCacheLockScreenWidget.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCB000000000000000000015 /* SharedThoughtStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000018 /* SharedThoughtStorage.swift */; };
+		BCB000000000000000000016 /* ShareCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000019 /* ShareCapture.swift */; };
+		BCB000000000000000000017 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000002 /* Thought.swift */; };
+		BCB000000000000000000018 /* CaptureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000003 /* CaptureOperation.swift */; };
+		BCB000000000000000000019 /* ThoughtStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000004 /* ThoughtStore.swift */; };
+		BCB00000000000000000001A /* FileThoughtStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000005 /* FileThoughtStore.swift */; };
+		BCB00000000000000000001B /* SharedThoughtStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000018 /* SharedThoughtStorage.swift */; };
+		BCB00000000000000000001C /* ShareCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000019 /* ShareCapture.swift */; };
+		BCB00000000000000000001D /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF00000000000000000001A /* ShareViewController.swift */; };
+		BCB00000000000000000001E /* BrainCacheShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BCF00000000000000000001E /* BrainCacheShareExtension.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BCB00000000000000000001F /* ShareCaptureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF00000000000000000001F /* ShareCaptureTests.swift */; };
+		BCB000000000000000000020 /* SharedThoughtStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF000000000000000000020 /* SharedThoughtStorageTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCC000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCP000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCA000000000000000000001;
+			remoteInfo = BrainCache;
+		};
+		BCC000000000000000000002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCP000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCA000000000000000000003;
+			remoteInfo = BrainCacheLockScreenWidget;
+		};
+		BCC000000000000000000003 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCP000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCA000000000000000000004;
+			remoteInfo = BrainCacheShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BCPH0000000000000000000A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BCB000000000000000000014 /* BrainCacheLockScreenWidget.appex in Embed App Extensions */,
+				BCB00000000000000000001E /* BrainCacheShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BCF000000000000000000001 /* BrainCacheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainCacheApp.swift; sourceTree = "<group>"; };
+		BCF000000000000000000002 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain/Thought.swift; sourceTree = "<group>"; };
+		BCF000000000000000000003 /* CaptureOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture/CaptureOperation.swift; sourceTree = "<group>"; };
+		BCF000000000000000000004 /* ThoughtStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence/ThoughtStore.swift; sourceTree = "<group>"; };
+		BCF000000000000000000005 /* FileThoughtStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence/FileThoughtStore.swift; sourceTree = "<group>"; };
+		BCF000000000000000000006 /* BrainCacheTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design/BrainCacheTheme.swift; sourceTree = "<group>"; };
+		BCF000000000000000000007 /* CaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Capture/CaptureViewModel.swift; sourceTree = "<group>"; };
+		BCF000000000000000000008 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features/Capture/CaptureView.swift; sourceTree = "<group>"; };
+		BCF000000000000000000009 /* CaptureOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureOperationTests.swift; sourceTree = "<group>"; };
+		BCF00000000000000000000A /* FileThoughtStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileThoughtStoreTests.swift; sourceTree = "<group>"; };
+		BCF00000000000000000000B /* CaptureViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewModelTests.swift; sourceTree = "<group>"; };
+		BCF00000000000000000000C /* BrainCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF00000000000000000000D /* BrainCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF00000000000000000000E /* CacheThoughtIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture/CacheThoughtIntent.swift; sourceTree = "<group>"; };
+		BCF00000000000000000000F /* CacheThoughtIntentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheThoughtIntentTests.swift; sourceTree = "<group>"; };
+		BCF000000000000000000010 /* CaptureDeepLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture/CaptureDeepLink.swift; sourceTree = "<group>"; };
+		BCF000000000000000000011 /* LockScreenCaptureWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenCaptureWidget.swift; sourceTree = "<group>"; };
+		BCF000000000000000000012 /* CaptureDeepLinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureDeepLinkTests.swift; sourceTree = "<group>"; };
+		BCF000000000000000000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF000000000000000000014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF000000000000000000015 /* BrainCacheLockScreenWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BrainCacheLockScreenWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF000000000000000000016 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BCF000000000000000000017 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BCF000000000000000000018 /* SharedThoughtStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence/SharedThoughtStorage.swift; sourceTree = "<group>"; };
+		BCF000000000000000000019 /* ShareCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share/ShareCapture.swift; sourceTree = "<group>"; };
+		BCF00000000000000000001A /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		BCF00000000000000000001B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCF00000000000000000001C /* BrainCache.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrainCache.entitlements; sourceTree = "<group>"; };
+		BCF00000000000000000001D /* BrainCacheShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrainCacheShareExtension.entitlements; sourceTree = "<group>"; };
+		BCF00000000000000000001E /* BrainCacheShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BrainCacheShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF00000000000000000001F /* ShareCaptureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCaptureTests.swift; sourceTree = "<group>"; };
+		BCF000000000000000000020 /* SharedThoughtStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedThoughtStorageTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCPH00000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCPH00000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCPH00000000000000000007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB000000000000000000013 /* SwiftUI.framework in Frameworks */,
+				BCB000000000000000000012 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCPH0000000000000000000B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCG000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				BCG000000000000000000002 /* BrainCache */,
+				BCG000000000000000000003 /* BrainCacheTests */,
+				BCG000000000000000000005 /* BrainCacheLockScreenWidget */,
+				BCG000000000000000000007 /* BrainCacheShareExtension */,
+				BCG000000000000000000006 /* Frameworks */,
+				BCG000000000000000000004 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCG000000000000000000002 /* BrainCache */ = {
+			isa = PBXGroup;
+			children = (
+				BCF000000000000000000001 /* BrainCacheApp.swift */,
+				BCF000000000000000000014 /* Info.plist */,
+				BCF00000000000000000001C /* BrainCache.entitlements */,
+				BCF000000000000000000002 /* Thought.swift */,
+				BCF000000000000000000003 /* CaptureOperation.swift */,
+				BCF000000000000000000010 /* CaptureDeepLink.swift */,
+				BCF000000000000000000004 /* ThoughtStore.swift */,
+				BCF000000000000000000005 /* FileThoughtStore.swift */,
+				BCF000000000000000000018 /* SharedThoughtStorage.swift */,
+				BCF000000000000000000019 /* ShareCapture.swift */,
+				BCF000000000000000000006 /* BrainCacheTheme.swift */,
+				BCF000000000000000000007 /* CaptureViewModel.swift */,
+				BCF000000000000000000008 /* CaptureView.swift */,
+				BCF00000000000000000000E /* CacheThoughtIntent.swift */,
+			);
+			path = BrainCache;
+			sourceTree = "<group>";
+		};
+		BCG000000000000000000003 /* BrainCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				BCF000000000000000000009 /* CaptureOperationTests.swift */,
+				BCF00000000000000000000A /* FileThoughtStoreTests.swift */,
+				BCF00000000000000000000B /* CaptureViewModelTests.swift */,
+				BCF00000000000000000000F /* CacheThoughtIntentTests.swift */,
+				BCF000000000000000000012 /* CaptureDeepLinkTests.swift */,
+				BCF00000000000000000001F /* ShareCaptureTests.swift */,
+				BCF000000000000000000020 /* SharedThoughtStorageTests.swift */,
+			);
+			path = BrainCacheTests;
+			sourceTree = "<group>";
+		};
+		BCG000000000000000000004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCF00000000000000000000C /* BrainCache.app */,
+				BCF00000000000000000000D /* BrainCacheTests.xctest */,
+				BCF000000000000000000015 /* BrainCacheLockScreenWidget.appex */,
+				BCF00000000000000000001E /* BrainCacheShareExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCG000000000000000000005 /* BrainCacheLockScreenWidget */ = {
+			isa = PBXGroup;
+			children = (
+				BCF000000000000000000011 /* LockScreenCaptureWidget.swift */,
+				BCF000000000000000000013 /* Info.plist */,
+			);
+			path = BrainCacheLockScreenWidget;
+			sourceTree = "<group>";
+		};
+		BCG000000000000000000006 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCF000000000000000000016 /* WidgetKit.framework */,
+				BCF000000000000000000017 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCG000000000000000000007 /* BrainCacheShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				BCF00000000000000000001A /* ShareViewController.swift */,
+				BCF00000000000000000001B /* Info.plist */,
+				BCF00000000000000000001D /* BrainCacheShareExtension.entitlements */,
+			);
+			path = BrainCacheShareExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCA000000000000000000001 /* BrainCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCL000000000000000000002 /* Build configuration list for PBXNativeTarget "BrainCache" */;
+			buildPhases = (
+				BCPH00000000000000000003 /* Sources */,
+				BCPH00000000000000000001 /* Frameworks */,
+				BCPH00000000000000000005 /* Resources */,
+				BCPH0000000000000000000A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCD000000000000000000002 /* PBXTargetDependency */,
+				BCD000000000000000000003 /* PBXTargetDependency */,
+			);
+			name = BrainCache;
+			productName = BrainCache;
+			productReference = BCF00000000000000000000C /* BrainCache.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BCA000000000000000000002 /* BrainCacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCL000000000000000000003 /* Build configuration list for PBXNativeTarget "BrainCacheTests" */;
+			buildPhases = (
+				BCPH00000000000000000004 /* Sources */,
+				BCPH00000000000000000002 /* Frameworks */,
+				BCPH00000000000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCD000000000000000000001 /* PBXTargetDependency */,
+			);
+			name = BrainCacheTests;
+			productName = BrainCacheTests;
+			productReference = BCF00000000000000000000D /* BrainCacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BCA000000000000000000003 /* BrainCacheLockScreenWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCL000000000000000000004 /* Build configuration list for PBXNativeTarget "BrainCacheLockScreenWidget" */;
+			buildPhases = (
+				BCPH00000000000000000008 /* Sources */,
+				BCPH00000000000000000007 /* Frameworks */,
+				BCPH00000000000000000009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrainCacheLockScreenWidget;
+			productName = BrainCacheLockScreenWidget;
+			productReference = BCF000000000000000000015 /* BrainCacheLockScreenWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		BCA000000000000000000004 /* BrainCacheShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCL000000000000000000005 /* Build configuration list for PBXNativeTarget "BrainCacheShareExtension" */;
+			buildPhases = (
+				BCPH0000000000000000000C /* Sources */,
+				BCPH0000000000000000000B /* Frameworks */,
+				BCPH0000000000000000000D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrainCacheShareExtension;
+			productName = BrainCacheShareExtension;
+			productReference = BCF00000000000000000001E /* BrainCacheShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCP000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					BCA000000000000000000001 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					BCA000000000000000000002 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = BCA000000000000000000001;
+					};
+					BCA000000000000000000003 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					BCA000000000000000000004 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+				};
+			};
+			buildConfigurationList = BCL000000000000000000001 /* Build configuration list for PBXProject "BrainCache" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCG000000000000000000001;
+			productRefGroup = BCG000000000000000000004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCA000000000000000000001 /* BrainCache */,
+				BCA000000000000000000002 /* BrainCacheTests */,
+				BCA000000000000000000003 /* BrainCacheLockScreenWidget */,
+				BCA000000000000000000004 /* BrainCacheShareExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BCPH00000000000000000005 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCPH00000000000000000006 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCPH00000000000000000009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCPH0000000000000000000D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCPH00000000000000000003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB000000000000000000001 /* BrainCacheApp.swift in Sources */,
+				BCB000000000000000000002 /* Thought.swift in Sources */,
+				BCB000000000000000000003 /* CaptureOperation.swift in Sources */,
+				BCB000000000000000000004 /* ThoughtStore.swift in Sources */,
+				BCB000000000000000000005 /* FileThoughtStore.swift in Sources */,
+				BCB000000000000000000015 /* SharedThoughtStorage.swift in Sources */,
+				BCB000000000000000000016 /* ShareCapture.swift in Sources */,
+				BCB000000000000000000006 /* BrainCacheTheme.swift in Sources */,
+				BCB000000000000000000007 /* CaptureViewModel.swift in Sources */,
+				BCB000000000000000000008 /* CaptureView.swift in Sources */,
+				BCB00000000000000000000C /* CacheThoughtIntent.swift in Sources */,
+				BCB00000000000000000000E /* CaptureDeepLink.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCPH00000000000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB000000000000000000009 /* CaptureOperationTests.swift in Sources */,
+				BCB00000000000000000000A /* FileThoughtStoreTests.swift in Sources */,
+				BCB00000000000000000000B /* CaptureViewModelTests.swift in Sources */,
+				BCB00000000000000000000D /* CacheThoughtIntentTests.swift in Sources */,
+				BCB000000000000000000011 /* CaptureDeepLinkTests.swift in Sources */,
+				BCB00000000000000000001F /* ShareCaptureTests.swift in Sources */,
+				BCB000000000000000000020 /* SharedThoughtStorageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCPH00000000000000000008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB00000000000000000000F /* CaptureDeepLink.swift in Sources */,
+				BCB000000000000000000010 /* LockScreenCaptureWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCPH0000000000000000000C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB000000000000000000017 /* Thought.swift in Sources */,
+				BCB000000000000000000018 /* CaptureOperation.swift in Sources */,
+				BCB000000000000000000019 /* ThoughtStore.swift in Sources */,
+				BCB00000000000000000001A /* FileThoughtStore.swift in Sources */,
+				BCB00000000000000000001B /* SharedThoughtStorage.swift in Sources */,
+				BCB00000000000000000001C /* ShareCapture.swift in Sources */,
+				BCB00000000000000000001D /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCD000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCA000000000000000000001 /* BrainCache */;
+			targetProxy = BCC000000000000000000001 /* PBXContainerItemProxy */;
+		};
+		BCD000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCA000000000000000000003 /* BrainCacheLockScreenWidget */;
+			targetProxy = BCC000000000000000000002 /* PBXContainerItemProxy */;
+		};
+		BCD000000000000000000003 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCA000000000000000000004 /* BrainCacheShareExtension */;
+			targetProxy = BCC000000000000000000003 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BCCFG0000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BCCFG0000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+		};
+			name = Release;
+		};
+		BCCFG0000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BrainCache/BrainCache.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrainCache/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Brain Cache";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braincache.iphone;
+				PRODUCT_MODULE_NAME = BrainCache;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BCCFG0000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BrainCache/BrainCache.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrainCache/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Brain Cache";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braincache.iphone;
+				PRODUCT_MODULE_NAME = BrainCache;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BCCFG0000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braincache.iphone.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrainCache.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BrainCache";
+			};
+			name = Debug;
+		};
+		BCCFG0000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braincache.iphone.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrainCache.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BrainCache";
+			};
+			name = Release;
+		};
+		BCCFG0000000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrainCacheLockScreenWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braincache.iphone.LockScreenWidget;
+				PRODUCT_MODULE_NAME = BrainCacheLockScreenWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BCCFG0000000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrainCacheLockScreenWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braincache.iphone.LockScreenWidget;
+				PRODUCT_MODULE_NAME = BrainCacheLockScreenWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BCCFG0000000000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = BrainCacheShareExtension/BrainCacheShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrainCacheShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Brain Cache";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braincache.iphone.ShareExtension;
+				PRODUCT_MODULE_NAME = BrainCacheShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BCCFG000000000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = BrainCacheShareExtension/BrainCacheShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BrainCacheShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Brain Cache";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.braincache.iphone.ShareExtension;
+				PRODUCT_MODULE_NAME = BrainCacheShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCL000000000000000000001 /* Build configuration list for PBXProject "BrainCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCFG0000000000000000001 /* Debug */,
+				BCCFG0000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCL000000000000000000002 /* Build configuration list for PBXNativeTarget "BrainCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCFG0000000000000000003 /* Debug */,
+				BCCFG0000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCL000000000000000000003 /* Build configuration list for PBXNativeTarget "BrainCacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCFG0000000000000000005 /* Debug */,
+				BCCFG0000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCL000000000000000000004 /* Build configuration list for PBXNativeTarget "BrainCacheLockScreenWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCFG0000000000000000007 /* Debug */,
+				BCCFG0000000000000000008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCL000000000000000000005 /* Build configuration list for PBXNativeTarget "BrainCacheShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCCFG0000000000000000009 /* Debug */,
+				BCCFG000000000000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCP000000000000000000001 /* Project object */;
+}

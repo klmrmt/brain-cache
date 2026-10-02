@@ -1,0 +1,67 @@
+name: Bug report
+description: Report a problem with Brain Cache on Mac.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use sample thoughts and attachments. Remove personal information from logs and screenshots.
+        For suspected vulnerabilities, follow the [security policy](https://github.com/klmrmt/brain-cache/security/policy) instead of describing them here.
+        This source preview is Mac only; retained mobile code is outside the release scope.
+  - type: input
+    id: version
+    attributes:
+      label: App version or source commit
+      description: Include the commit hash if you built from source. Write "unknown" if you cannot find it.
+      placeholder: Version or commit
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: Version shown in About This Mac
+    validations:
+      required: true
+  - type: dropdown
+    id: processor
+    attributes:
+      label: Mac processor
+      options:
+        - Apple silicon
+        - Intel
+        - Not sure
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where does the problem occur?
+      options:
+        - Native app built from source
+        - Packaged Mac app
+        - Browser preview
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Give a short sequence using sample data. Mention whether it still happens after quitting and reopening, if safe to check.
+      placeholder: |
+        1. Open ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual behavior
+      description: Explain what you expected and what happened, including any visible error message.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional logs or screenshots
+      description: Include only relevant, sanitized excerpts or screenshots made with sample data. Never attach your database, real thoughts, credentials, or personal files.

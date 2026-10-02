@@ -1,0 +1,15 @@
+# Synthetic image prompts
+
+Generated October 1, 2026 using the built-in image-generation tool. Both calls used text only: no reference image and no previous conversation image was included. These are illustrations, not app screenshots.
+
+## Capture concepts
+
+Saved at `docs/design/compact-capture-directions.png`.
+
+Create a brand-new professional product concept board for Brain Cache, a private Mac thought-capture app. Use only the fictional generic content specified here. Do not base it on a screenshot, existing image, real person's notes, names, companies, endpoints, identifiers, emails, tokens or URLs. Landscape 1536 by 1024 composition, three calm equal columns separated by thin neutral rules. Title exactly "Brain Cache — capture concepts", subtitle exactly "Illustration · fictional example notes". Each column presents one floating capture panel on a plain warm-black background. Column A heading "A · Command strip": an understated single-line terminal-like strip with text "Read a chapter" and small "⌘ Return" control. Column B heading "B · Adaptive card": a slightly taller quiet panel with text "Plan a weekend walk" and optional muted "Add tags". Column C heading "C · Pet Dock": approved current direction, compact rounded panel with small warm-dark blob companion badge docked slightly over the left edge (a rounded charcoal creature with two tiny amber eyes), text "Water the plants", a compact Return save affordance, and quiet "Add tags" and paperclip below. One tiny green status label "Saved locally" beneath a separate lower example panel in each column. Strict aesthetic: quiet terminal companion, minimal intentional decoration, monospaced typography, 1px borders, 14px floating panel radii; background #070706, panel #181816, surface #11110F, borders #2C2B27, focused border #47443D, primary text #F3F0E7, muted text #918D83, restrained amber #F2B84B for creature eyes only, green #70C997 for saved status only. Use large legible monospaced headings and generous space, no glossy effects, no decorative gradients, no device frame, no desktop wallpaper, no real screenshot. Footer exactly "Concept illustrations · not app screenshots". Nothing else may be written.
+
+## Plant study
+
+Saved at `docs/examples/plant-study.png`.
+
+Use case: illustration-story. Asset type: public Brain Cache documentation example image, fictional plant study that a sample note could attach. Create a brand-new landscape flat raster illustration on a warm-paper #F3F0E7 background, with five modest potted houseplants on a single fine soil/shelf line, varied simple leaves and heights, warm-black #070706 outlines, muted moss #9CBF6B and saved green #70C997 leaves, one tiny amber #F2B84B bud. Quiet terminal-companion aesthetic: restrained, minimal, spacious, clean forms, no lettering, no logos, no people, no photos, no identifiable location, no real user data, no screenshots, no watermark. Generic invented plants and containers only. Balanced 3:2 composition, soft paper texture, subtle hand-drawn character. This is an original fictional example attachment, not an app UI or screenshot. Do not use any earlier conversation images as input.

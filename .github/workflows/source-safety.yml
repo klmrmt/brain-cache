@@ -1,0 +1,61 @@
+name: Source secret checks
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: source-safety-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  secrets:
+    name: Scan source and history for secrets
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Check out all history without retaining credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install checksum-verified Gitleaks 8.30.1
+        shell: bash
+        run: |
+          set -euo pipefail
+          scanner_dir="$RUNNER_TEMP/braincache-gitleaks"
+          mkdir -p "$scanner_dir"
+          curl --fail --silent --show-error --location --retry 3 \
+            https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz \
+            --output "$scanner_dir/archive.tar.gz"
+          (cd "$scanner_dir" && \
+            echo '551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  archive.tar.gz' | sha256sum --check --strict)
+          tar -xzf "$scanner_dir/archive.tar.gz" -C "$scanner_dir" gitleaks
+          "$scanner_dir/gitleaks" version
+          printf '[extend]\nuseDefault = true\n' > "$scanner_dir/config.toml"
+          : > "$scanner_dir/empty.gitleaksignore"
+
+      - name: Reject detected secrets with redacted output
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -I - <<'PYGUARD'
+          from pathlib import Path
+
+          forbidden = {".gitleaks.toml", ".gitleaksignore"}
+          if any(path.name in forbidden for path in Path(".").rglob("*")):
+              raise SystemExit("Repository scanner configuration/ignore files are forbidden")
+          PYGUARD
+          "$RUNNER_TEMP/braincache-gitleaks/gitleaks" git . \
+            --config "$RUNNER_TEMP/braincache-gitleaks/config.toml" \
+            --gitleaks-ignore-path "$RUNNER_TEMP/braincache-gitleaks/empty.gitleaksignore" \
+            --log-opts=--all --redact --no-banner --ignore-gitleaks-allow
+          "$RUNNER_TEMP/braincache-gitleaks/gitleaks" dir . \
+            --config "$RUNNER_TEMP/braincache-gitleaks/config.toml" \
+            --gitleaks-ignore-path "$RUNNER_TEMP/braincache-gitleaks/empty.gitleaksignore" \
+            --redact --no-banner --ignore-gitleaks-allow

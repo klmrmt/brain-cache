@@ -1,0 +1,463 @@
+.thought-detail.thought-detail--familiar {
+  --detail-gutter: 24px;
+  width: min(1000px, 100%);
+  color-scheme: var(--color-scheme);
+  min-height: min(650px, 100%);
+}
+
+.thought-detail.thought-detail--familiar.thought-detail--canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__heading {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 58px;
+  max-height: none;
+  align-items: center;
+  gap: 12px;
+  padding: 12px var(--detail-gutter);
+  overflow: visible;
+  border-bottom: 0;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__heading h2 {
+  min-width: 0;
+  margin-right: auto;
+  color: var(--muted);
+  font-size: calc(10px * var(--font-scale));
+  letter-spacing: 1.1px;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__actions {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__actions button {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-size: var(--font-small);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__actions .thought-detail__icon-button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-color: transparent;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__actions .thought-detail__complete {
+  border-color: color-mix(in srgb, var(--saved) 30%, var(--border));
+  color: var(--saved);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__actions .thought-detail__complete:hover {
+  border-color: var(--saved);
+  background: color-mix(in srgb, var(--saved) 8%, transparent);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__actions .thought-detail__delete,
+.thought-detail.thought-detail--familiar .thought-detail__actions .thought-detail__delete:hover {
+  border-color: transparent;
+  color: var(--error);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__actions .thought-detail__pin[aria-pressed="true"] {
+  color: var(--signal);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__pin-label {
+  color: var(--signal);
+  font-size: calc(10px * var(--font-scale));
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__meta-row {
+  display: flex;
+  flex: 0 0 auto;
+  min-width: 0;
+  max-height: min(300px, 36vh);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  padding: 4px var(--detail-gutter) 16px;
+  overflow: auto;
+  scrollbar-color: var(--border-strong) transparent;
+  scrollbar-width: thin;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__meta-row > .thought-detail__tags {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-editor__chips {
+  display: contents;
+}
+
+.thought-detail.thought-detail--familiar .tag-chip--removable {
+  min-height: 29px;
+  max-width: 100%;
+  border-radius: 7px;
+  font-size: calc(11px * var(--font-scale));
+}
+
+.thought-detail.thought-detail--familiar .tag-chip__label {
+  min-width: 0;
+  margin-left: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.thought-detail.thought-detail--familiar .tag-chip--removable > button:not(.tag-chip__color-button) {
+  width: 25px;
+  min-height: 27px;
+  flex: 0 0 auto;
+  margin-left: 5px;
+  border-left-color: transparent;
+  border-radius: 0 6px 6px 0;
+  color: inherit;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-combobox {
+  flex: 0 1 132px;
+  min-width: min(132px, 100%);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-combobox:focus-within {
+  flex: 1 1 220px;
+}
+
+.thought-detail.thought-detail--familiar .tag-combobox__field {
+  min-height: 29px;
+  padding: 0 8px;
+  border-color: var(--border-strong);
+  border-style: dashed;
+  background: transparent;
+}
+
+.thought-detail.thought-detail--familiar .tag-combobox__field:focus-within {
+  border-color: var(--signal);
+  border-style: solid;
+}
+
+.thought-detail.thought-detail--familiar .tag-combobox__field input {
+  width: 100%;
+  font-size: calc(11px * var(--font-scale));
+}
+
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-options {
+  position: static;
+  max-height: 150px;
+  margin-top: 6px;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-option {
+  min-height: 30px;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-option strong {
+  font-size: var(--font-small);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-color-picker {
+  order: 3;
+  flex: 0 1 360px;
+  width: 100%;
+  box-shadow: none;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-editor__pending,
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-editor__error,
+.thought-detail.thought-detail--familiar .thought-detail-tag-editor .tag-editor__available {
+  order: 4;
+  flex-basis: 100%;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__tabs {
+  display: flex;
+  flex: 0 0 auto;
+  min-height: 42px;
+  gap: 24px;
+  padding: 0 var(--detail-gutter);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__tabs [role="tab"] {
+  position: relative;
+  display: inline-flex;
+  min-height: 41px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: calc(12px * var(--font-scale));
+  cursor: pointer;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__tabs [role="tab"]:hover,
+.thought-detail.thought-detail--familiar .thought-detail__tabs [role="tab"][aria-selected="true"] {
+  color: var(--paper);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__tabs [role="tab"][aria-selected="true"]::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--paper);
+  content: "";
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__note-panel[hidden],
+.thought-detail.thought-detail--familiar .thought-detail__details-panel[hidden] {
+  display: none;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__details-panel {
+  padding: 24px var(--detail-gutter) 8px;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(280px * var(--font-scale))), 1fr));
+  gap: var(--detail-gutter);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__detail-section {
+  min-width: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__detail-section h3 {
+  margin: 0 0 12px;
+  color: var(--subtle);
+  font-size: calc(10px * var(--font-scale));
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__detail-section > p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: calc(11px * var(--font-scale));
+  line-height: 1.6;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__metadata {
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__metadata div {
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__metadata dt,
+.thought-detail.thought-detail--familiar .thought-detail__metadata dd {
+  font-size: calc(10px * var(--font-scale));
+  line-height: 1.6;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__metadata dd {
+  color: var(--paper);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__save-row {
+  min-height: 44px;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 0 var(--detail-gutter);
+  padding: 12px 0 16px;
+  border-bottom: 0;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__save-row .thought-detail__status {
+  margin-right: auto;
+  font-size: calc(10px * var(--font-scale));
+  line-height: 1.6;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__save-row > button {
+  min-height: 28px;
+  padding: 4px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--paper);
+  font: inherit;
+  font-size: calc(10px * var(--font-scale));
+  cursor: pointer;
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__save-row > button:hover {
+  background: var(--hover);
+}
+
+.thought-detail.thought-detail--familiar .thought-detail__save-row .checklist-progress {
+  margin-left: auto;
+}
+
+.thought-detail.thought-detail--familiar .attachment-area {
+  margin: 0 var(--detail-gutter);
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+}
+
+.thought-detail.thought-detail--familiar .attachment-add {
+  min-height: 28px;
+  padding: 4px 7px;
+  border-color: transparent;
+  font-size: calc(11px * var(--font-scale));
+}
+
+.thought-detail.thought-detail--familiar .attachment-area__hint {
+  margin-top: 8px;
+  font-size: calc(10px * var(--font-scale));
+}
+
+.thought-detail.thought-detail--familiar .attachment-list {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2px;
+  margin-top: 6px;
+}
+
+.thought-detail.thought-detail--familiar .attachment-file {
+  min-height: 35px;
+  gap: 9px;
+  padding: 2px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.thought-detail.thought-detail--familiar .attachment-preview--file {
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  background: transparent;
+  color: var(--muted);
+  font-size: calc(8px * var(--font-scale));
+}
+
+.thought-detail.thought-detail--familiar .attachment-preview--file svg {
+  width: 17px;
+  height: 17px;
+}
+
+.thought-detail.thought-detail--familiar .attachment-file__info {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.thought-detail.thought-detail--familiar .attachment-file__info > span,
+.thought-detail.thought-detail--familiar .attachment-file__info > button {
+  min-width: 0;
+  padding: 4px 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.thought-detail.thought-detail--familiar .attachment-file__info small {
+  flex: 0 0 auto;
+  font-size: calc(10px * var(--font-scale));
+  white-space: nowrap;
+}
+
+.thought-detail.thought-detail--familiar .attachment-remove {
+  flex-basis: 26px;
+  width: 26px;
+  height: 28px;
+}
+
+@media (max-width: 760px) {
+  .thought-detail.thought-detail--familiar {
+    --detail-gutter: 16px;
+  }
+
+  .thought-detail.thought-detail--familiar .thought-detail__heading {
+    gap: 8px;
+  }
+
+  .thought-detail.thought-detail--familiar .thought-detail__heading h2 {
+    font-size: calc(9px * var(--font-scale));
+  }
+
+  .thought-detail.thought-detail--familiar .thought-detail__actions {
+    gap: 1px;
+  }
+}
+
+@media (max-width: 530px) {
+  .thought-detail.thought-detail--familiar {
+    --detail-gutter: 12px;
+  }
+
+  .thought-detail.thought-detail--familiar .thought-detail__heading h2 {
+    letter-spacing: 0.5px;
+  }
+
+  .thought-detail.thought-detail--familiar .thought-detail__actions .thought-detail__icon-button {
+    width: 28px;
+  }
+
+  .thought-detail.thought-detail--familiar .thought-detail__pin-label {
+    display: none;
+  }
+
+  .thought-detail.thought-detail--familiar .thought-detail__details-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .thought-detail.thought-detail--familiar .attachment-file__info {
+    flex-wrap: wrap;
+    gap: 0 8px;
+  }
+}
+
+.thought-detail.thought-detail--familiar .tag-combobox__field > span { display: none; }
+
+.thought-detail.thought-detail--familiar .tag-combobox__field { grid-template-columns: minmax(0, 1fr); }
+.thought-detail--familiar .rich-editor__content .rich-document { font-size: var(--font-reading); line-height: var(--leading-reading); }
+.thought-detail--familiar .rich-editor__content .rich-document h3 { font-size: calc(20px * var(--font-scale)); }
+.thought-detail--familiar .rich-editor__content .rich-document h2 { font-size: calc(24px * var(--font-scale)); }
+.thought-detail--familiar .rich-editor__content .rich-document h1 { font-size: calc(28px * var(--font-scale)); }

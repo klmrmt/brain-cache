@@ -1,0 +1,93 @@
+name: Mac checks and packaging
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mac-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  mac:
+    name: Apple silicon checks and ad hoc bundles
+    # This build host does not establish the release's supported OS/CPU matrix.
+    # GitHub's macos-15 standard runner is arm64 for public and private repos.
+    runs-on: macos-15
+    timeout-minutes: 60
+    env:
+      CI: 'true'
+      CARGO_TERM_COLOR: always
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Check out the source without retaining credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Read the pinned toolchain
+        id: toolchain
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          from pathlib import Path
+
+          config = json.loads(Path("scripts/release/toolchain.json").read_text())
+          if set(config) != {"node", "rust", "pnpm", "target"}:
+              raise SystemExit("Unexpected toolchain manifest fields")
+          for name in ("node", "rust", "pnpm"):
+              if not isinstance(config[name], str) or not re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", config[name]):
+                  raise SystemExit(f"Expected an exact version for {name}")
+          if config["target"] != "aarch64-apple-darwin":
+              raise SystemExit("This job supports the Apple silicon build target only")
+          package = json.loads(Path("apps/mac/package.json").read_text())
+          if package["packageManager"] != f"pnpm@{config['pnpm']}":
+              raise SystemExit("pnpm manifest and packageManager disagree")
+          with Path(os.environ["GITHUB_OUTPUT"]).open("a") as output:
+              for name, value in config.items():
+                  output.write(f"{name}={value}\n")
+          PY
+
+      - name: Set up the pinned Node.js version
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ steps.toolchain.outputs.node }}
+          architecture: arm64
+          package-manager-cache: false
+
+      - name: Install the pinned pnpm and Rust toolchain
+        env:
+          PNPM_VERSION: ${{ steps.toolchain.outputs.pnpm }}
+          RUST_VERSION: ${{ steps.toolchain.outputs.rust }}
+          RUST_TARGET: ${{ steps.toolchain.outputs.target }}
+        run: |
+          test "$(uname -m)" = arm64
+          npm install --global --ignore-scripts "pnpm@${PNPM_VERSION}"
+          rustup toolchain install "$RUST_VERSION" --profile minimal --target "$RUST_TARGET" --no-self-update
+
+      - name: Verify distribution signing safeguards without credentials
+        run: python3 scripts/release/test-sign-mac.py
+
+      - name: Run locked checks and build verified ad hoc artifacts
+        env:
+          RUSTUP_TOOLCHAIN: ${{ steps.toolchain.outputs.rust }}
+        run: python3 scripts/release/build-mac.py --output-dir "$RUNNER_TEMP/braincache-artifacts"
+
+      - name: Keep verified build artifacts for review
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: brain-cache-mac-aarch64-${{ github.sha }}
+          path: ${{ runner.temp }}/braincache-artifacts/
+          if-no-files-found: error
+          retention-days: 14
+          compression-level: 0

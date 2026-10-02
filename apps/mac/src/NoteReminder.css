@@ -1,0 +1,69 @@
+.note-reminder-compact { min-width: 0; }
+.note-reminder__pill {
+  display: inline-flex;
+  max-width: 100%;
+  min-height: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: var(--font-small);
+  cursor: pointer;
+}
+.note-reminder__pill svg { flex-shrink: 0; }
+.note-reminder__pill-status { font-size: var(--font-label); }
+.note-reminder__pill-status::before { content: "·"; margin-right: 6px; }
+.note-reminder__pill:hover:not(:disabled) { background: var(--hover); color: var(--paper); }
+.note-reminder__pill.is-error, .note-reminder__recovery.is-error { color: var(--error); }
+.note-reminder__pill.is-overdue, .note-reminder__recovery.is-overdue { color: var(--signal); }
+.note-reminder__popover {
+  position: fixed;
+  z-index: 100;
+  box-sizing: border-box;
+  width: 304px;
+  max-width: calc(100vw - 16px);
+  max-height: calc(100dvh - 16px);
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 10px 32px var(--reminder-shadow);
+  color: var(--paper);
+  font: inherit;
+  font-size: calc(11px * var(--font-scale));
+  line-height: 1.5;
+}
+.note-reminder__popover-heading { margin-bottom: 12px; font-size: calc(12px * var(--font-scale)); }
+.note-reminder__popover label { display: grid; gap: 8px; color: var(--muted); font-size: var(--font-label); letter-spacing: .07em; text-transform: uppercase; }
+.note-reminder__popover input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  min-height: 36px;
+  padding: var(--padding-reminder-input);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--ink);
+  color: var(--paper);
+  color-scheme: var(--color-scheme);
+  font: inherit;
+  font-size: var(--font-control);
+}
+.note-reminder__timezone { margin: 8px 0 12px; color: var(--muted); font-size: var(--font-label); overflow-wrap: anywhere; }
+.note-reminder__recovery { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin-bottom: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.note-reminder__recovery button { padding: 0; border: 0; background: transparent; color: inherit; text-decoration: underline; text-underline-offset: 3px; font: inherit; cursor: pointer; }
+.note-reminder__error { margin: 10px 0; color: var(--error); overflow-wrap: anywhere; }
+.note-reminder__popover-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 6px; }
+.note-reminder__popover-actions button { min-height: 32px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 7px; background: transparent; color: var(--muted); font: inherit; font-size: var(--font-small); cursor: pointer; }
+.note-reminder__popover-actions button:hover:not(:disabled) { background: var(--hover); color: var(--paper); }
+.note-reminder__popover-actions .note-reminder__clear { margin-right: auto; border-color: transparent; }
+.note-reminder__popover-actions .note-reminder__save { border-color: var(--paper); background: var(--paper); color: var(--ink); }
+.note-reminder__popover-actions .note-reminder__save:hover:not(:disabled) { background: var(--paper); color: var(--ink); opacity: .88; }
+.note-reminder__popover button:disabled, .note-reminder__pill:disabled { opacity: .5; cursor: wait; }
+.note-reminder__pill:focus-visible, .note-reminder__popover button:focus-visible, .note-reminder__popover input:focus-visible { outline: 1px solid var(--signal); outline-offset: 2px; }
