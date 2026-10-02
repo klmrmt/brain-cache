@@ -1,10 +1,10 @@
 # Brain Cache Mac Release Plan
 
-Historical build evidence below was recorded in the private development repository; it does not refer to inherited commits or CI runs in this fresh repository. The maintainer approved public source publication at klmrmt/brain-cache on October 1, 2026; official installers remain deferred.
+Published October 2, 2026 (UTC): [Brain Cache source preview](https://github.com/klmrmt/brain-cache). Official installers remain deferred. Historical build evidence below was recorded in the private development repository; it does not refer to inherited commits or CI runs in this fresh repository.
 
-Assessment updated: 2026-10-01. Initial baseline: `50ed1e9`; fresh contributor setup: `41459ec`. Release documents and engineering fixes are now combined on `codex/release-preparation`, based on `41459ec`. See the [engineering check](docs/release/engineering-review.md) for current evidence and limits.
+Assessment updated: 2026-10-02. Initial baseline: `50ed1e9`; fresh contributor setup: `41459ec`. Release documents and engineering fixes are now combined on `codex/release-preparation`, based on `41459ec`. See the [engineering check](docs/release/engineering-review.md) for current evidence and limits.
 
-**Decision: prepare source publication first; defer the downloadable app.** The maintainer chose a Mac-only source preview on 2026-10-01. Apple Developer membership, signing, notarization, installer notices, and installed-app acceptance are not gates for this source milestone. Public source must come from a fresh reviewed snapshot; the development repository must remain private because its history contains screenshot-derived note text and personal Git attribution. A public downloadable app remains NO-GO until its separate checks pass. This assessment does not claim complete security or native acceptance.
+**Decision: source preview published; defer the downloadable app.** The maintainer chose a Mac-only source preview on 2026-10-01. Apple Developer membership, signing, notarization, installer notices, and installed-app acceptance are not gates for this source milestone. Public source must come from a fresh reviewed snapshot; the development repository must remain private because its history contains screenshot-derived note text and personal Git attribution. A public downloadable app remains NO-GO until its separate checks pass. This assessment does not claim complete security or native acceptance.
 
 ## Agreed scope
 
@@ -29,13 +29,21 @@ For the source preview, report the build target of macOS 13 or later and the ver
 - [x] Verify the project creation records for the Blob icon and design board; record origin, hashes, and limits in the [asset review](docs/release/asset-provenance.md).
 - [x] Replace the screenshot-derived board with a new text-only generated board using fictional notes; add a fictional example attachment and review current images.
 - [x] Maintainer approved publication at `klmrmt/brain-cache` on 2026-10-01. Use a fresh reviewed source history and keep the development repository private.
-- [ ] Finish the new repository checks and public activation using the [clean-source procedure](docs/release/public-source.md).
+- [x] Finish the new repository checks and public activation using the [clean-source procedure](docs/release/public-source.md).
 - [x] Review nine actual remote branches, historical attribution, twenty PRs, and four Actions logs; scan all 623 unique blobs in the broader retained remote-tracking history. No operational credentials were found, but historical board text and seventeen commits with personal email attribution require the fresh-source route. See the [privacy review](docs/release/repository-review.md#privacy-and-replacement-follow-up--october-1-2026) for scope and limits.
-- [ ] Scan the exact committed revision and any newer public surfaces immediately before publication.
-- [ ] Review preparation privately, export only reviewed source, and validate the new private destination before making it public. Do not publish the development repository or its history; do not offer CI candidates as official installers.
-- [ ] Enable GitHub private vulnerability reporting, verify the hosted README/license/forms/security route, and check anonymous clone access after publication.
+- [x] Scan the exact committed revision and new repository logs before publication; verify fresh history, attribution, source files, and absence of app downloads.
+- [x] Review preparation privately, export only reviewed source, and validate the new private destination before making it public. The development repository remains private; no app downloads are hosted.
+- [x] Enable GitHub private vulnerability reporting and secret scanning/push protection; verify hosted documentation/templates and anonymous clone access after publication. No private test report was submitted.
 
 **Done when:** the public repository has accurate source-only setup and reuse terms, a usable contribution/security route, reviewed public content, and no implication that an official Mac installer is available.
+
+## Public source-preview verification — October 2, 2026 (UTC)
+
+The fresh repository contains 168 reviewed source files and one new root commit with project/noreply attribution. It inherits no private development refs or Git objects. Source/history scans and 143 current local documentation path/anchor checks passed. Anonymous cloning and hosted README, MIT license, contributor templates, and security-policy access were verified. GitHub private vulnerability reporting, secret scanning, and push protection are enabled. No security report or notification-delivery test was submitted.
+
+[Mac CI on the published application/test revision](https://github.com/klmrmt/brain-cache/actions/runs/36962450247) passed 453 automated tests, production bundling, synthetic backup/restore verification, and native ad hoc app/DMG packaging. Source-secret CI passed on the same revision. A Settings focus test now waits for the prior tag filter's scheduled focus before opening Settings; assertions and application behavior are unchanged. The corrected test passed ten consecutive focused runs locally.
+
+The new repository's build logs and temporary candidates were reviewed for credentials and personal information. Static review covered readable resources and packaging metadata; it cannot exhaustively inspect machine code or compressed data. Reviewed candidates were removed from GitHub and public CI skips app uploads. There are no official installers or GitHub Releases. This publication adds no new manual native or installed-app acceptance.
 
 ## Current evidence
 
@@ -115,17 +123,18 @@ The signing Mac has no usable Developer ID Application identity in the checked K
 
 - [x] Complete the initial file/history and credential review, including retained mobile code and local snapshots. Scope, evidence, limitations, and remaining privacy checks are in the [review record](docs/release/repository-review.md).
 - [x] Combine release documents with GitHub `main` at `41459ec`; review the prepared diff and rescan the 146-file candidate source snapshot.
-- [ ] Review any additional public GitHub surfaces and rerun scanning on the exact revision to publish.
+- [x] Review the new repository surfaces and scan its exact source/history before publication; exclude private development history and remove temporary app candidates.
 - [x] Inventory the declared licenses of the assessed Mac production dependencies and Rust target graph. See [dependencies and assets](THIRD_PARTY.md).
 - [x] Confirm project asset provenance and visually review fictional images and GIFs; see the [asset review](docs/release/asset-provenance.md).
 - [ ] Prepare and verify dependency notices for the actual distributed artifact before the later app download.
 - [x] Add the chosen `LICENSE` and matching package metadata.
 - [x] Add the [contributor guide](CONTRIBUTING.md), [bug and feature issue forms](.github/ISSUE_TEMPLATE), [pull request template](.github/pull_request_template.md), and [security-reporting policy](SECURITY.md). GitHub Issues is enabled; the policy provides a contact-request fallback without vulnerability details.
-- [ ] After the owner-authorized visibility change, enable GitHub private vulnerability reporting, verify the reporter-facing form and maintainer notifications, and update `SECURITY.md` with the active route. It is only available for public repositories; the current private-repository endpoint returned 404 with an administrator session. See [GitHub's setup instructions](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository).
-- [ ] Verify issue forms, the pull request template, and security-policy links on GitHub after these files reach the default branch. Local validation does not prove the hosted forms are active.
+- [x] Enable private vulnerability reporting in the public repository and verify the published security-policy route. [GitHub's setup instructions](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository).
+- [ ] Test a private report and maintainer notification delivery when the maintainer chooses to submit a test. Configuration is verified; no report was sent during publication.
+- [x] Verify the published issue-form files, pull request template, and security-policy links on the default branch. Reporting requires a GitHub account; no test issue, PR, or security report was submitted.
 - [x] Verify documented dependency installation, automated checks, and native packaging from a fresh source checkout on the recorded environment. No private signing credentials were needed; initial DMG failure and successful retry are recorded above.
-- [ ] Check a new contributor's clone/setup path after publication, including access to the hosted documentation. Validate the intended minimum tool and macOS versions before advertising a tested support matrix.
-- [x] Finish the README, agent instructions, screenshots, and release documentation on the local `codex/release-preparation` branch. Hosted activation and publication remain separate.
+- [x] Verify an anonymous fresh clone and public documentation access. The new repository's locked Mac build passed on a fresh runner; minimum macOS/tool versions and Intel remain unverified.
+- [x] Publish the README, agent instructions, fictional screenshots/GIFs, and release documentation in the fresh public repository.
 
 **Done when:** a new contributor can understand the scope, build the app, report a problem, and identify the reuse terms without access to the maintainer's computer.
 
@@ -190,4 +199,4 @@ Apple Developer enrollment, distribution signing/notarization, official installe
 
 ## Next action
 
-Close the source-publication checklist: asset provenance and the content review are complete; scan the final reviewed source revision and finish hosted activation. The prepared PR contains the README, license, contributor/agent instructions, engineering fixes, CI, and reusable signing tools. Keep development history private and prepare a fresh repository with the reviewed source snapshot using the [publication procedure](docs/release/public-source.md). Verify new CI, public access, and security reporting before treating publication as complete. Apple membership and signing are deferred. Preserve the signing procedure and mobile code for their later milestones.
+The source-only Mac preview is public at [klmrmt/brain-cache](https://github.com/klmrmt/brain-cache). Review incoming contributions through the source-secret and Mac checks. Keep private development history separate. For an official installer, complete Developer ID signing/notarization, distribution notices, supported-system decisions, and installed-app acceptance. Mobile and device sync remain deferred.

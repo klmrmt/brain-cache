@@ -1,5 +1,7 @@
 # Publish a clean source snapshot
 
+The source-only Mac preview was published October 2, 2026 (UTC) at [klmrmt/brain-cache](https://github.com/klmrmt/brain-cache). Its fresh history, public access, security configuration, and native CI were verified. The procedure below records the publication approach and safeguards for future changes. Official installers remain deferred.
+
 The current development repository must remain private. Its historical board contains screenshot-derived note text, and some commits carry a personal email address. Replacing a file on the preparation branch does not erase either from history. A new public repository made from a reviewed source snapshot is the recommended publication route. The maintainer approved publication at `klmrmt/brain-cache` on October 1, 2026. This is a source-only Mac development preview; official installers remain deferred.
 
 ## What to publish

@@ -6,6 +6,7 @@ All notable changes to Brain Cache are documented in this file.
 
 ### Added
 
+- Publish the Mac source preview in a fresh public repository with MIT terms, fictional product examples, build checks, and private security reporting; official installers remain deferred.
 - Add automatic secret checks for source and Git history on pushes and pull requests, using checksum-verified Gitleaks with redacted output.
 - Choose a source-only Mac preview as the first public milestone; defer Apple Developer membership, signing, notarization, and official installer distribution.
 - Prepare a separate local Developer ID signing and notarization procedure with candidate verification, durable submission records, ticket checks, and synthetic safeguard tests; actual distribution signing requires maintainer credentials.

@@ -4,9 +4,7 @@ Brain Cache is a source-only Mac development preview with no official packaged d
 
 ## Report privately
 
-Use **Report a vulnerability** on the repository's [Security Advisories page](https://github.com/klmrmt/brain-cache/security/advisories) when that button is available. This sends the report privately through GitHub.
-
-Use the private-report button on the Security Advisories page. If it is temporarily unavailable, follow the contact-request fallback below.
+Use **Report a vulnerability** on the repository's [Security Advisories page](https://github.com/klmrmt/brain-cache/security/advisories). This sends the report privately through GitHub and requires a GitHub account.
 
 If the private-report button is unavailable, open a [new issue](https://github.com/klmrmt/brain-cache/issues/new) with the title **Private security contact request** and only this message: "Please provide a private channel for a security report." Wait for a private channel before sharing details. Do not include the affected component, reproduction steps, exploit code, private contact details, logs, or screenshots in that issue or its comments. Existing collaborators can instead use a private channel already established with the maintainer.
 
