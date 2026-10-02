@@ -840,6 +840,7 @@ describe("library tagging and retrieval", () => {
   it("opens Settings with the sidebar hidden, traps focus, and restores the dashboard", async () => {
     await typeInto(inputByLabel("Search your cache"), "Alpha");
     await click(buttonByLabel("Filter by tag work"));
+    await nextFrame();
     await click(buttonByLabel("Collapse sidebar"));
     const pane = container.querySelector<HTMLElement>(".thoughts-pane")!;
     pane.scrollTop = 180;
