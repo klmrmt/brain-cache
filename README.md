@@ -20,7 +20,8 @@
   <a href="#features">Features</a> ·
   <a href="#feature-tour">Feature tour</a> ·
   <a href="#privacy">Privacy</a> ·
-  <a href="#contributing">Contribute</a>
+  <a href="#contributing">Contribute</a> ·
+  <a href="https://discord.gg/3zDAE6hqZ">Discord</a>
 </p>
 
 <p align="center"><sub>Mac only · Source preview · MIT licensed</sub></p>
@@ -229,6 +230,12 @@ With the checked-in Mac app identifier, the default database location is:
 Follow the [Mac backup and restore guide](docs/release/backup-restore.md) to create a verified recovery copy without losing SQLite WAL data.
 
 Device sync is outside the current release. Any future synchronization must preserve the rule that a thought is saved on the originating device first.
+
+## Community
+
+Join the [Brain Cache Discord](https://discord.gg/3zDAE6hqZ) to ask questions, share feedback, and discuss ideas with other users and contributors.
+
+For bug reports and feature requests, use [GitHub Issues](https://github.com/klmrmt/brain-cache/issues) so they are easy to track.
 
 ## Contributing
 
